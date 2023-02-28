@@ -4,11 +4,20 @@ on:
   pull_request:
     branches:
       - main
-      
-permissions:
-  contents: 'read'
-  id-token: 'write'
-  issues: 'write' #__This fixed the HttpError: Resource not accessible by integration
+
+permissions: write-all
+#permissions:
+#  contents: 'write'
+#  id-token: 'write'
+#  issues: 'write' #__This fixed the HttpError: Resource not accessible by integratio
+#  actions: 'write'
+#  checks: 'write'
+#  deployments: 'write'
+#  packages: 'write'
+#  pull-requests: 'write'
+#  repository-projects: 'write'
+#  security-events: 'write'
+#  statuses: 'write'
 
 jobs:
   build-test:
